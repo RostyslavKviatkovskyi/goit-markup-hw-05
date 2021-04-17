@@ -761,11 +761,22 @@ body {
   background-color: var(--background-color);
 }
 
-.modal-close-btn-icon {
+.modal-close-btn {
+  top: 8px;
+  right: 8px;
+  position: absolute;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 30px;
   height: 30px;
+  background: transparent;
 }
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* MODAL END */
