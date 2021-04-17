@@ -762,7 +762,10 @@ body {
 }
 
 .modal-close-btn-icon {
-  width: 18px;
-  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
 }
 /* MODAL END */
