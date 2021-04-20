@@ -120,7 +120,9 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-btn:hover,
@@ -365,12 +367,15 @@ body {
 }
 
 .occupation-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
   position: absolute;
   bottom: 0;
   background: rgba(47, 48, 58, 0.8);
   color: var(--background-color);
   text-transform: uppercase;
-  padding: 27px 10px;
   width: 100%;
   text-align: center;
 }
@@ -401,7 +406,8 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: var(--background-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-item:not(:last-child) {
@@ -527,7 +533,8 @@ body {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover,
@@ -602,12 +609,10 @@ body {
 }
 
 .social-footer .social-list-link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social-footer .social-list-icon {
   fill: var(--background-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -663,6 +668,7 @@ body {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 }
 
 .projects-item-wrapper {
@@ -688,9 +694,8 @@ body {
   flex-basis: calc(100% / 3 - 30px);
 }
 
-.projects-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.projects-item-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-item-link:hover,
@@ -702,6 +707,7 @@ body {
 .projects-item-link:hover .overlay,
 .projects-item-link:focus .overlay {
   transform: translateY(0%);
+  opacity: 1;
 }
 
 .projects-list {
