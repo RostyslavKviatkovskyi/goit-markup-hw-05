@@ -660,6 +660,67 @@ body {
   color: var(--accent-color);
 }
 
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe-text {
+  color: var(--background-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.ubscribe-form {
+  display: flex;
+}
+
+.subscribe-input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--background-hero-footer);
+  height: 50px;
+  width: 342px;
+  padding-left: 16px;
+  margin-right: 12px;
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 15px;
+}
+
+.subscribe-btn {
+  padding: 10px 62px 10px 29px;
+  min-width: 200px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--background-color);
+  cursor: pointer;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.subscribe-btn:focus,
+.subscribe-btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-color);
+}
+
+.subscribe-btn-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 28px;
+  top: 13px;
+}
+
 /* FOOTER END */
 
 /* PROJECTS */
@@ -763,6 +824,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background-color);
+  padding: 40px;
 }
 
 .modal-close-btn {
@@ -781,6 +843,117 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+  margin-top: 4px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-form-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+
+.modal-form-message {
+  width: 100%;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  height: 120px;
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.modal-form-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-message:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.modal-form-check-desk {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.modal-form-check-desk::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--h-color);
+  cursor: pointer;
+  margin-right: 7px;
+  border-radius: 2px;
+}
+
+.modal-form-term:checked + .modal-form-check-desk::before {
+  background-image: url("/images/modal/icon-check.svg");
+  background-position: center;
+}
+
+.modal-form-term:focus + .modal-form-check-desk::before {
+  border: 2px solid var(--accent-color);
+}
+
+.modal-form-btn {
+  padding: 10px 32px;
+  min-width: 200px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--background-color);
+  cursor: pointer;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: center;
+}
+
+.modal-form-btn:focus,
+.modal-form-btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-color);
 }
 
 /* MODAL END */
