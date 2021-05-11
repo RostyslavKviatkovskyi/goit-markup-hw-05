@@ -924,6 +924,7 @@ body {
   margin-right: 7px;
   border-radius: 2px;
 }
+
 .modal-form-term:checked + .modal-form-check-desk::before {
   background-image: url("/images/modal/icon-check.svg");
   background-position: center;
